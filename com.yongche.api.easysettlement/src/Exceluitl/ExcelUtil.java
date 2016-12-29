@@ -41,7 +41,7 @@ public class ExcelUtil {
 		 List<S_Parameter> params=new ArrayList<S_Parameter>();
 		 for(int i=1;i<=rowNums;i++){
 			 HSSFRow r = s.getRow(i);
-			 cell=r.getCell(0);
+//			 cell=r.getCell(0);
 			 S_Parameter param= new S_Parameter();
 			 r.getCell(0).setCellType(Cell.CELL_TYPE_STRING);
 			 param.set_driver_id(r.getCell(0).getStringCellValue());

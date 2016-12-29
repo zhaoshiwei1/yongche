@@ -55,7 +55,7 @@ public class Distribute_Parameters
 	{
 		int c = a / b; 
 		int d = a % b; 
-		if(2 * d > b)
+		if(2 * d >= b)
 		{
 			c = c +1; 
 		}else
