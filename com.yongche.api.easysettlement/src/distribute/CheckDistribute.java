@@ -7,15 +7,18 @@ import java.util.List;
 import log.Log;
 import Exceluitl.ExcelUtil;
 import SettlementParameters.Distribute_Parameters;
+import db.DB_Select_driver_id;
 import db.DBselector;
 
 public class CheckDistribute 
 {//输入当前订单id 对应的分佣任务id 列表，检查分佣， 返回string buffer
-	public static StringBuffer c_distribute(long driver_id, String settlement_id, int row)
+	public static StringBuffer c_distribute(String settlement_id)
 	{
+		long driver_id = DB_Select_driver_id.Select_Driver_ID(settlement_id);
+		
 		StringBuffer bf = new StringBuffer("");
 		int flag = 1;
-		List<String> id_list = DBselector.get_distribute_commission_id_list(driver_id, settlement_id);
+		List<String> id_list = DBselector.get_distribute_commission_id_list(driver_id,settlement_id);
 		for (String id : id_list)
 		{
 			Distribute_Parameters dp = DBselector.get_distribute_details(driver_id, id);

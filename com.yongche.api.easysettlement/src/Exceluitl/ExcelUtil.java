@@ -44,11 +44,8 @@ public class ExcelUtil {
 //			 cell=r.getCell(0);
 			 S_Parameter param= new S_Parameter();
 			 r.getCell(0).setCellType(Cell.CELL_TYPE_STRING);
-			 param.set_driver_id(r.getCell(0).getStringCellValue());
+			 param.set_settlement_id(r.getCell(0).getStringCellValue());
 			 Log.e(r.getCell(0).getStringCellValue()+"\n");
-			 r.getCell(1).setCellType(Cell.CELL_TYPE_STRING);
-			 param.set_settlement_id(r.getCell(1).getStringCellValue());
-			 Log.e(r.getCell(1).getStringCellValue()+"\n");
 			 params.add(param);
 		 }
 		 return params;

@@ -11,6 +11,7 @@ public class SqlGenerator
 	public static final String distribute_filter = " WHERE distribute_commission_log_id = ";
 	
 	public static final String rent_company_filter = "SELECT * FROM yc_crm_common.company WHERE company_id = ";
+	
 	public String Settlement_Sql_Generator(long driver_id, String settlement_id)
 	{
 		int index = (int) (driver_id % 64);

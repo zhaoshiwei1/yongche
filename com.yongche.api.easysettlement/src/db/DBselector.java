@@ -15,6 +15,7 @@ public class DBselector
 { 
 	public static ArrayList<String> get_distribute_commission_id_list(long driver_id, String settlement_id)
 	{//获得当前订单id 对应的分佣任务id 列表
+		
 		ArrayList<String> id_list = new ArrayList<String>();
 		SqlGenerator sql_gen = new SqlGenerator();
 		String sql = sql_gen.Settlement_Sql_Generator(driver_id, settlement_id);
